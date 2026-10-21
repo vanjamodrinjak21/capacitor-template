@@ -1,6 +1,6 @@
 # Capacitor template
 
-Kostur Capacitor aplikacije s Vueom 3 i vue-routerom (SPA, Vite, običan JavaScript), kao `cordova create`, samo s Capacitorom. Web kod je u `src/`, nativni projekti se generiraju.
+Kostur Capacitor aplikacije od čistog HTML-a, CSS-a i JavaScripta (Vite samo za build, bez frameworka), kao `cordova create`, samo s Capacitorom. Web kod je u `src/`, nativni projekti se generiraju.
 
 ## Početak (redoslijed je bitan)
 
@@ -27,13 +27,11 @@ bunx cap open ios            # Xcode: odaberi Team, ⌘R
 
 ```
 index.html         ulazna stranica Vitea
-src/main.js        ulaz: Vue + router
-src/router.js      rute (hash povijest, SPA)
-src/App.vue        okvir: RouterView + donja navigacija
-src/views/         ekrani
-src/composables/   stanje + pristup pluginima
+src/main.js        ulaz: hash rute + donja navigacija (nav je u index.html)
+src/views/         ekrani (funkcije koje crtaju u <main>)
+src/services/      stanje + pristup pluginima
 src/native.js      jedino mjesto za @capacitor/* pakete
-src/lib.js         čista logika bez Vuea i Capacitora (testira se)
+src/lib.js         čista logika bez Capacitora i DOM-a (testira se)
 src/*.test.js      vitest
 capacitor.config.json  appId, appName, webDir (dist)
 CLAUDE.md          pravila za Claude Code (kopiraj pravila u svoj projekt)

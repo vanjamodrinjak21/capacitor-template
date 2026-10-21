@@ -13,4 +13,4 @@ nav {
   background: Canvas; border-top: 1px solid color-mix(in srgb, CanvasText 15%, transparent);
 }
 nav a { color: inherit; padding: 8px 16px; text-decoration: none; }
-nav a.router-link-exact-active { font-weight: 600; text-decoration: underline; }
+nav a.aktivan { font-weight: 600; text-decoration: underline; }
