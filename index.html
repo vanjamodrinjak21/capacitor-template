@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capacitor template</title>
+<style>
+:root{--bg:#fff;--fg:#14161a;--mut:#5b6270;--line:#d9dde3;--acc:#14161a;--accfg:#fff}
+@media(prefers-color-scheme:dark){:root{--bg:#101215;--fg:#eceef1;--mut:#9aa1ad;--line:#2a2f37;--acc:#eceef1;--accfg:#101215}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,sans-serif}
+main{max-width:560px;margin:0 auto;padding:48px 16px}
+h1{font-size:28px;margin:0 0 8px}
+p{color:var(--mut);margin:0 0 24px}
+.btns{display:grid;gap:12px}
+a.b,button.b{display:block;width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:6px;background:none;color:var(--fg);font:inherit;font-weight:600;text-align:left;text-decoration:none;cursor:pointer}
+a.b.p{background:var(--acc);color:var(--accfg);border-color:var(--acc)}
+a.b:hover,button.b:hover{border-color:var(--fg)}
+a.b:focus-visible,button.b:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+code{display:block;margin:24px 0 8px;padding:12px;border:1px solid var(--line);border-radius:6px;font:14px ui-monospace,Menlo,monospace;overflow-x:auto;white-space:nowrap}
+small{color:var(--mut)}
+</style>
+</head>
+<body>
+<main>
+<h1>Capacitor template</h1>
+<p>Vue 3 + Vite + Capacitor. Odaberi gdje želiš otvoriti projekt.</p>
+<div class="btns">
+<a class="b p" id="vsc" href="#">Otvori u VS Code</a>
+<a class="b" id="cur" href="#">Otvori u Cursoru</a>
+<button class="b" id="cp" type="button">Kopiraj naredbu za terminal</button>
+<a class="b" id="zip" href="#">Preuzmi ZIP</a>
+</div>
+<code id="cmd"></code>
+<small>VS Code i Cursor moraju biti instalirani. Ako se ništa ne dogodi, koristi naredbu za terminal.</small>
+</main>
+<script>
+var url="https://github.com/vanjamodrinjak21/capacitor-template.git";
+var cmd="git clone "+url+" && cd capacitor-template && bun install";
+document.getElementById("vsc").href="vscode://vscode.git/clone?url="+encodeURIComponent(url);
+document.getElementById("cur").href="cursor://vscode.git/clone?url="+encodeURIComponent(url);
+document.getElementById("zip").href="https://github.com/vanjamodrinjak21/capacitor-template/archive/refs/heads/main.zip";
+document.getElementById("cmd").textContent=cmd;
+var cp=document.getElementById("cp");
+cp.onclick=function(){
+  navigator.clipboard.writeText(cmd).then(function(){cp.textContent="Kopirano";setTimeout(function(){cp.textContent="Kopiraj naredbu za terminal"},2000)},function(){cp.textContent="Kopiraj ručno iz polja ispod"});
+};
+</script>
+</body>
+</html>
