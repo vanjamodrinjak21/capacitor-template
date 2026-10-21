@@ -4,9 +4,11 @@ Kostur Capacitor aplikacije od čistog HTML-a, CSS-a i JavaScripta (Vite samo za
 
 ## Početak (redoslijed je bitan)
 
+Najlakše: gumbi za VS Code, Cursor i terminal su na https://vanjamodrinjak21.github.io/capacitor-template/
+
 ```bash
-cp -R capacitor-template moja-aplikacija && cd moja-aplikacija
-git init
+git clone https://github.com/vanjamodrinjak21/capacitor-template.git moja-aplikacija && cd moja-aplikacija
+rm -rf .git && git init
 madelog init                 # PRIJE prvog commita; ispuni .madelog/intent.md
 ```
 

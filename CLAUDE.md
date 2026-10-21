@@ -4,6 +4,7 @@
 Čisti HTML + CSS + JavaScript (bez frameworka, hash rute) + Vite (samo build) + Capacitor. Paketi: samo bun (bunx), nikad npm/yarn. Nema package-lock.json.
 
 ## Pravila
+- Samo HTML, CSS i JavaScript: ne dodavaj framework (Vue, React, ...) ni CSS biblioteke.
 - Stanje i pristup pluginima idu u `src/services/`, viewovi samo prikazuju.
 - Capacitor plugini se importaju samo u `src/native.js`. Ostatak koda zove njegove funkcije.
 - Prije koda: prvo `PRD.md` pa plan pa test koji pada pa kod.
