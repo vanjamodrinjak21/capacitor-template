@@ -1,0 +1,16 @@
+:root { color-scheme: light dark; }
+body {
+  margin: 0;
+  font: 17px/1.5 -apple-system, system-ui, sans-serif;
+  /* safe-area: izrez i home indikator na iPhoneu */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+main { padding: 20px 20px 80px; }
+nav {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  display: flex; justify-content: space-around;
+  padding: 12px 0 calc(12px + env(safe-area-inset-bottom));
+  background: Canvas; border-top: 1px solid color-mix(in srgb, CanvasText 15%, transparent);
+}
+nav a { color: inherit; padding: 8px 16px; text-decoration: none; }
+nav a.router-link-exact-active { font-weight: 600; text-decoration: underline; }

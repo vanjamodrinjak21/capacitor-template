@@ -1,0 +1,5 @@
+{
+  "appId": "hr.example.mojaaplikacija",
+  "appName": "Moja aplikacija",
+  "webDir": "dist"
+}
